@@ -8,23 +8,11 @@ UM_InputDeviceSubsystem::UM_InputDeviceSubsystem()
 
 }
 
-void UM_InputDeviceSubsystem::ToggleSlateNavigation(bool bEnable)
+void UM_InputDeviceSubsystem::ToggleSlateNavigation(bool bInTabNavigation, bool bInKeyNavigation, bool bInAnalogNavigation)
 {
-	if(!bEnable)
-	{ 
 		TSharedRef<FNavigationConfig> navigation_config = FSlateApplication::Get().GetNavigationConfig();
-		navigation_config->bTabNavigation = false;
-		navigation_config->bKeyNavigation = false;
-		navigation_config->bAnalogNavigation = false;
+		navigation_config->bTabNavigation = bInTabNavigation;
+		navigation_config->bKeyNavigation = bInKeyNavigation;
+		navigation_config->bAnalogNavigation = bInAnalogNavigation;
 		FSlateApplication::Get().SetNavigationConfig(navigation_config);
-	}
-	else
-	{
-		TSharedRef<FNavigationConfig> navigation_config = FSlateApplication::Get().GetNavigationConfig();
-		navigation_config->bTabNavigation = true;
-		navigation_config->bKeyNavigation = true;
-		navigation_config->bAnalogNavigation = true;
-		FSlateApplication::Get().SetNavigationConfig(navigation_config);
-	}
-
 }
