@@ -27,6 +27,6 @@ protected:
 	//TSharedRef<FNavigationConfig> DisabledNavigationConfig = MakeShared<FNavigationConfig>();
 public:
 	UFUNCTION(BlueprintCallable, Category = "Input|Navigation")
-	void ToggleSlateNavigation(bool bInTabNavigation, bool bInKeyNavigation, bool bInAnalogNavigation);
+	void ToggleSlateNavigation(bool bInTabNavigation = true, bool bInKeyNavigation = true, bool bInAnalogNavigation = true, bool bInActionNavigation = true);
 	
 };
