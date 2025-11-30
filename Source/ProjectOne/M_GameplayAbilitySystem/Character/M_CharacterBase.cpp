@@ -2,6 +2,7 @@
 
 
 #include "M_CharacterBase.h"
+#include "ProjectOne/M_BasicAttributeSets/M_BasicAttributeSet.h"
 
 // Sets default values
 AM_CharacterBase::AM_CharacterBase()
@@ -12,6 +13,8 @@ AM_CharacterBase::AM_CharacterBase()
 	m_AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
 	m_AbilitySystemComponent->SetIsReplicated(true);
 	m_AbilitySystemComponent->SetReplicationMode(m_ReplicationMode);
+
+	m_BasicAttributeSet = CreateDefaultSubobject<UM_BasicAttributeSet>(TEXT("BasicAttributeSet"));
 }
 
 // Called when the game starts or when spawned

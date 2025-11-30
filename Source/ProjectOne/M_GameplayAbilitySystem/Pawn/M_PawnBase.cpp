@@ -2,6 +2,7 @@
 
 
 #include "M_PawnBase.h"
+#include "ProjectOne/M_BasicAttributeSets/M_BasicAttributeSet.h"
 
 // Sets default values
 AM_PawnBase::AM_PawnBase()
@@ -14,7 +15,7 @@ AM_PawnBase::AM_PawnBase()
 	m_AbilitySystemComponent->SetReplicationMode(m_ReplicationMode);
 
 
-	
+	m_BasicAttributeSet = CreateDefaultSubobject<UM_BasicAttributeSet>(TEXT("BasicAttributeSet"));
 }
 
 // Called when the game starts or when spawned

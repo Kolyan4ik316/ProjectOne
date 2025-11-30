@@ -21,8 +21,8 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AbilitySystem")
 	class UAbilitySystemComponent* m_AbilitySystemComponent;
 
-
-
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AbilitySystem")
+	class UM_BasicAttributeSet* m_BasicAttributeSet;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
